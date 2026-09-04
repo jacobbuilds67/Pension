@@ -12,3 +12,6 @@ header nav a{border:0;background:none;padding:11px 15px;border-radius:12px;color
 header nav a[aria-current]{background:#dfeae5;color:var(--green);font-weight:700}
 .update-banner{padding:10px 20px;background:#fff0bb;text-align:center;color:#493b10}.update-banner button{margin-left:12px;border:0;border-radius:8px;padding:6px 10px;background:var(--green);color:white}
 @media(max-width:700px){.status-pill{margin:0;font-size:10px}.bottom-nav a{border:0;background:none;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:3px;padding:5px;font-size:10px;text-decoration:none}.bottom-nav a span{font-size:20px}.bottom-nav a[aria-current]{color:var(--green-2);font-weight:800}}
+
+.hero-stats{grid-template-columns:repeat(4,1fr)}
+@media(max-width:700px){.hero-stats{grid-template-columns:repeat(2,1fr)}.hero-stats div:last-child{grid-column:auto}}

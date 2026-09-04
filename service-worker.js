@@ -1,4 +1,4 @@
-const CACHE_NAME = "pensionsblik-v2";
+const CACHE_NAME = "pensionsblik-v3";
 const APP_SHELL = [
   "./", "./index.html", "./manifest.webmanifest", "./src/app.js", "./src/router.js",
   "./src/config.js", "./src/styles.css", "./src/domain/calculations.js", "./src/storage/database.js",
