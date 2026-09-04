@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0d513f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Pensionsblik">
+    <meta name="description" content="Privat overblik over din pensionsopsparing">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="icon" href="./public/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./public/icon-192.png">
+    <link rel="stylesheet" href="./src/styles.css">
+    <title>Pensionsblik</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Gå til indhold</a>
+    <div id="app" class="app-shell" aria-live="polite">
+      <header>
+        <a class="brand" href="#/dashboard" aria-label="Gå til overblik"><span>P</span><strong>Pensionsblik</strong></a>
+        <span id="storage-status" class="status-pill">Starter…</span>
+        <nav aria-label="Primær navigation">
+          <a href="#/dashboard" data-route="dashboard">⌂ Overblik</a>
+          <a href="#/history" data-route="history">◷ Historik</a>
+          <a href="#/settings" data-route="settings">⚙ Indstillinger</a>
+        </nav>
+      </header>
+      <aside id="update-banner" class="update-banner" hidden><span>En ny version er klar.</span><button type="button" data-apply-update>Opdatér appen</button></aside>
+      <main id="main-content" tabindex="-1"></main>
+      <footer>Kun på din enhed · Ingen data forlader browseren</footer>
+      <nav class="bottom-nav" aria-label="Mobilnavigation">
+        <a href="#/dashboard" data-route="dashboard"><span>⌂</span>Overblik</a>
+        <a href="#/history" data-route="history"><span>◷</span>Historik</a>
+        <a href="#/settings" data-route="settings"><span>⚙</span>Indstillinger</a>
+      </nav>
+      <dialog id="editor-dialog" class="dialog"></dialog>
+      <div id="toast-root" aria-live="polite"></div>
+    </div>
+    <noscript>Appen kræver JavaScript for at kunne gemme og vise din opsparing.</noscript>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
