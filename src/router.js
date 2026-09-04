@@ -1,6 +1,6 @@
 export function currentRoute() {
   const route = location.hash.replace(/^#\//, "").split("/")[0];
-  return ["dashboard", "history", "settings"].includes(route) ? route : "dashboard";
+  return ["dashboard", "history", "countdown", "settings"].includes(route) ? route : "dashboard";
 }
 export function startRouter(render) {
   const run = () => render(currentRoute());

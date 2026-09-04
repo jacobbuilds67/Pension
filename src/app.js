@@ -3,7 +3,7 @@ import { startRouter } from "./router.js";
 import { openDatabase } from "./storage/database.js";
 import { entriesRepository, settingsRepository } from "./storage/repository.js";
 import { createBackup, downloadBackup, mergeEntries, parseBackup } from "./backup/backup-service.js";
-import { dashboardScreen, escapeHtml, formatDate, historyScreen, settingsScreen } from "./ui/screens.js";
+import { countdownScreen, dashboardScreen, escapeHtml, formatDate, historyScreen, settingsScreen } from "./ui/screens.js";
 
 let entries = [];
 let settings = { ...DEFAULT_SETTINGS };
@@ -28,7 +28,7 @@ async function refresh() {
 function render(route = activeRoute) {
   activeRoute = route;
   setActiveRoute(route);
-  main.innerHTML = route === "history" ? historyScreen(entries, activePeriod) : route === "settings" ? settingsScreen(settings) : dashboardScreen(entries, settings, activePeriod);
+  main.innerHTML = route === "history" ? historyScreen(entries, activePeriod) : route === "countdown" ? countdownScreen(settings) : route === "settings" ? settingsScreen(settings) : dashboardScreen(entries, settings, activePeriod);
   bindEvents();
   main.focus({ preventScroll: true });
 }
